@@ -11,8 +11,9 @@ const GenreBox = ({ children }) => {
 
 
 
-const FilmBox = ({ film }) => {
+const FilmBox = ({ film, addLike }) => {
     const [active, setActive] = useState(false)
+    const [data, setData] = useState(film)
 
 
     const genreFinder = () => {
@@ -123,6 +124,12 @@ const FilmBox = ({ film }) => {
             <div className="film-short">
                 <h2>Synopsis</h2>
                 <p>{film.overview}</p>
+            </div>
+            <div
+                className="like-btn"
+                onChange={addLike}
+            >
+                <h2>Add to like</h2>
             </div>
         </div>
     );

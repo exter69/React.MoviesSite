@@ -11,7 +11,6 @@ export default function App() {
     <BrowserRouter className="App">
       <Routes>
           <Route path={"/"} element={<Home/>} />
-        <Route path={"/home"} element={<Home/>} />
         <Route path={"/like"} element={<Like/>} />
         <Route path={"*"} element={<Home/>} />
       </Routes>

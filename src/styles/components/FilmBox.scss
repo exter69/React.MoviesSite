@@ -2,18 +2,22 @@
 
 .film-box{
 
-  &.active{
+  &:hover{
     background: $color-1;
+  }
+  &:hover > .like-btn{
+    background: $black;
   }
 
   width: 300px;
-  height: 600px;
+  height: 650px;
 
   margin: 5px 0 5px 0;
 
   background: $black;
   border-radius: 25px;
 
+  overflow: hidden;
   .film-img{
     background: $color-2;
 
@@ -47,9 +51,6 @@
     left: 10px;
     top: 15px;
 
-    h2{
-
-    }
 
     h3{
       opacity: 0.7;
@@ -107,13 +108,40 @@
       width: 225px;
       height: 170px;
     }
+    p::-webkit-scrollbar {
+      width: 0 !important
+    }
+  }
 
+  .like-btn{
+    position: relative;
+    height: 50px;
+    width: 140px;
+
+    left: 50%;
+    margin-left: -70px;
+
+    border-radius: 75px;
+
+    background: $color-1;
+
+    &:active{
+      background: $color-3;
+    }
+
+    h2{
+      position: relative;
+
+      top: 8px;
+      left: 50%;
+      margin-left: -40px;
+    }
   }
 
   p::-webkit-scrollbar {
     width: 0 !important
   }
-  overflow: hidden;
+
 }
 
 
